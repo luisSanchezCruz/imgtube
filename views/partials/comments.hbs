@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Lastes Comments
+        </h3>
+    </div>
+    <div class="panel-body">
+        <ul class="media-list">
+            {{#each sidebar.comments}}
+                <li class="media">
+                    <a href="/images/{{image.uniqueId}}" class="pull-left">
+                        <img class='media-object' src="/public/upload/{{image.filename}}" style="width:45px;height:45px;">
+                    </a>
+                    <div class="media-body">
+                        {{commnet}}<br>
+                        <strong class="media-heading">{{name}}</strong>
+                        <small class='text-muted'>{{timeago timestamp}}</small>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
